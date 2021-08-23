@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+     # apps de terceiros
+    "debug_toolbar",
+    # meus apps
+    "users.apps.UsersConfig",
+    #"pages.apps.PagesConfig",
+    #"products.apps.ProductsConfig",
 ]
 
 MIDDLEWARE = [
@@ -75,7 +81,7 @@ WSGI_APPLICATION = 'ebyteshop.wsgi.application'
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.psycopg2",
+        "ENGINE": "django.db.backends.postgresql",
         "NAME": "postgres",
         "USER": "postgres",
         "PASSWORD": "postgres",
@@ -122,3 +128,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# User Model
+
+AUTH_USER_MODEL = "users.User"
+

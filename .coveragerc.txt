@@ -1,0 +1,6 @@
+[run]
+omit =
+    *migration*,
+    *tests*,
+    *ebyteshop*
+    conftest.py
